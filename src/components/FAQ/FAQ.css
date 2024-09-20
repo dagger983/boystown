@@ -1,0 +1,62 @@
+.faq-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Outfit";
+  }
+  
+  .faq-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+  }
+  
+  .faq-list {
+    border-top: 1px solid #ccc;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .faq-item.active .faq-question {
+    color: #f15b5b;
+  }
+  
+  .faq-question {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    font-size: 1rem;
+    padding: 0 15px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .faq-answer.open {
+    max-height: 200px; /* Adjust based on the content size */
+  }
+  

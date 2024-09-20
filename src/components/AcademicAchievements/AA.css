@@ -1,0 +1,141 @@
+/* SchoolExamReport.css */
+.report-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.report-container h2 {
+  font-size: 3.5rem;
+  color: #002147;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Nimbus Sans L", sans-serif;
+}
+
+/* Table Styling */
+.exam-report-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.exam-report-table th,
+.exam-report-table td {
+  border: 1px solid #dee2e6;
+  padding: 12px 15px;
+}
+
+.exam-report-table th {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.exam-report-table td {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.exam-report-table tr:nth-child(odd) td {
+  background-color: #d8eaf0;
+}
+
+/* Media Query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  .report-container h2 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .exam-report-table th,
+  .exam-report-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .exam-report-table {
+    max-width: 100%; /* Make table fit the screen */
+  }
+  .aa h2{
+    font-size: 32px;
+  }
+}
+
+/* Media Query for mobile devices */
+@media screen and (max-width: 576px) {
+  .report-container h2 {
+    font-size: 1.5rem; /* Further adjust heading size for mobile */
+  }
+
+  .exam-report-table th,
+  .exam-report-table td {
+    padding: 8px;
+    font-size: 0.8rem; /* Smaller text for mobile */
+  }
+
+  .exam-report-table {
+    font-size: 0.8rem;
+  }
+  
+  .exam-report-table th,
+  .exam-report-table td {
+    white-space: nowrap; 
+  }
+  
+  .exam-report-table {
+    display: block;
+    overflow-x: auto; 
+    width: 100%; 
+  }
+}
+
+/* Banner Styling */
+.aa {
+  background-color: #22355c;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-family: "Nimbus Sans L", sans-serif;
+  font-size: 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .aa {
+    font-size: 48px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .aa {
+    font-size: 36px; 
+    padding: 15px;
+  }
+}
+
+.aa-2 {
+  background-color: #d4af37;
+  padding: 30px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+}
+.aa-2 h3{
+  font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+  .aa-2 {
+    font-size: 1rem;
+    padding: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 576px) {
+  .aa-2 {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    padding: 15px;
+  }
+}

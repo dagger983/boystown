@@ -1,0 +1,142 @@
+/* Base Styles */
+.contactContainer-main {
+  display: flex;
+  flex-direction: row; /* Default row layout for larger screens */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Enables wrapping */
+}
+
+.contactContainer {
+  height: auto;
+  width: 50%; /* Half width on larger screens */
+  padding: 30px;
+  font-family: "Outfit";
+  color: #12274a;
+}
+
+.contactContainer h3 {
+  font-size: 48px;
+}
+
+.contactContainer div {
+  margin: 40px;
+}
+
+.contactContainer li {
+  margin-top: 20px;
+  font-weight: 200;
+}
+
+.contactContainer2 {
+  width: 50%; /* Half width on larger screens */
+  padding: 30px;
+  background-color: rgb(231, 252, 252);
+  font-family: "Outfit";
+}
+
+.contactContainer2-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:90px;
+  margin-top:90px;
+  margin-bottom:90px;
+}
+
+.contactContainer2 form {
+  height: auto;
+  width: 100%;
+  max-width: 350px;
+  background-color: white;
+  padding: 30px;
+  color: #12274a;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.contactContainer2 input {
+  margin-bottom: 20px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #12274a;
+  width: 100%;
+  outline: none;
+  padding: 10px;
+}
+
+.contactContainer2 button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #a6180d;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #a6180d;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transition */
+}
+
+.contactContainer2 button:hover {
+  background-color: #ffffff;
+  color: #a6180d;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 768px) {
+  .contactContainer {
+    width: 50%; /* Keep side-by-side for tablets and larger */
+  }
+
+  .contactContainer2 {
+    width: 50%; /* Keep side-by-side for tablets and larger */
+  }
+
+  .contactContainer2 form {
+    width: 350px;
+    right: 250px;
+    top: 70px;
+  }
+}
+
+/* Column layout for smaller screens */
+@media (max-width: 768px) {
+  .contactContainer-main {
+    flex-direction: column; /* Stack elements in column for smaller screens */
+  }
+
+  .contactContainer,
+  .contactContainer2 {
+    width: 100%; /* Full width in column layout */
+  }
+
+  .contactContainer div {
+    margin: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .contactContainer h3 {
+    font-size: 36px; /* Adjust font size for mobile */
+  }
+
+  .contactContainer2-main {
+    margin: 30px; /* Adjust margin for mobile */
+  }
+
+  .contactContainer2 form {
+    right: 0;
+    top: 0;
+  }
+  .contactContainer2-main{
+    flex-direction: column;
+    position: relative;
+    
+  }
+  .contactContainer2-main img{
+    height:300px;
+  }
+}
+
+

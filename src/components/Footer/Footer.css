@@ -1,0 +1,150 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  background-color: #12274a;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 50px;
+  min-width: 300px; /* Ensure each section has a minimum width */
+}
+
+.logo,
+.contact-form {
+  background-color: #12274a;
+}
+
+.logo img {
+  height: 330px;
+  margin-right: 50px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info,
+.social-links {
+  background-color: #d4af37; /* Gold background */
+  color: white;
+}
+
+.contact-info p {
+  font-size: 22px;
+  margin: 60px 0;
+  font-weight: 200;
+}
+
+/* Contact Form Styling */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+}
+
+.form-group input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: white;
+  margin-top: 30px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.contact-form input:focus {
+  outline: none;
+}
+
+/* Social Links Styling */
+.social-links p {
+  font-size: 18px;
+  margin: 60px 0;
+  cursor: pointer;
+  font-weight: 200;
+}
+
+.social-links p:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .footer-section {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-section {
+    min-width: 100%; /* Ensure sections stack vertically on smaller screens */
+    padding: 20px;
+  }
+  .logo img {
+    margin: 0 auto;
+  }
+  .form-group {
+    flex-direction: column;
+  }
+  .brand-watermark p{
+   font-size: small;
+   position: relative;
+   bottom:10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 15px;
+  }
+  .contact-info p,
+  .social-links p,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 16px; /* Smaller text size for small screens */
+  }
+}
+
+.brand-watermark {
+  background-color: #e4f9ff;
+  height: 50px;
+  text-align: center;
+  padding: 20px;
+  color: #12274a;
+  font-family: "Nimbus Sans L", sans-serif;
+}

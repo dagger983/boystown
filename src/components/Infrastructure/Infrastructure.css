@@ -1,0 +1,60 @@
+.infrastructure {
+  text-align: center;
+  height: 200px;
+  background-color: #22355c;
+  color: white;
+  font-family: "Nimbus Sans L", sans-serif;
+  font-size: 64px;
+  padding: 30px;
+}
+.infrastructure2 {
+  display: flex;
+  padding: 30px;
+  font-family: "Outfit";
+}
+.infrastructure2 p {
+  margin-right: 30px;
+  cursor: pointer;
+  font-size: 32px;
+}
+
+.tab-section {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: transparent; /* Make background transparent */
+  font-size: 16px; /* Set a decent font size */
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent; /* Default no underline */
+}
+
+.tab-button:hover {
+  color: #007bff; /* Hover effect */
+}
+
+.tab-button.active {
+  color: #007bff; /* Active tab text color */
+  border-bottom: 2px solid #007bff; /* Underline for active tab */
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width:768px){
+  .infrastructure {
+    font-size:24px;
+    height:150px;
+  }
+
+}

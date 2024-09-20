@@ -1,0 +1,109 @@
+.faculty-1 {
+    font-family: "Nimbus Sans L", sans-serif;
+    background-color: #22355c;
+    height: 200px;
+    color: white;
+    text-align: center;
+    font-size: 64px;
+    padding: 30px;
+  }
+  
+  .faculty-2 {
+    font-family: "Outfit";
+    padding: 30px;
+    background-color: #d4af37;
+    color: white;
+  }
+  .faculty-2 h4{
+    font-size:32px;
+  }
+  .facultyType{
+    font-size:32px;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:20px;
+    font-family: "Outfit";
+    font-weight: 400;
+    text-transform: uppercase;
+
+  }
+  .faculty-2 h3 {
+    font-weight: 200;
+  }
+  
+  .faculty-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .faculty-member {
+    text-align: center;
+    width: 16.66%; /* Default: 6 members per row */
+    max-width: 200px;
+    margin-bottom:20px;
+  }
+  
+  .faculty-member img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .faculty-member h2 {
+    font-size: 18px;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
+  }
+  
+  .faculty-member p {
+    font-size: 16px;
+    color: #666;
+    font-family: "Outfit", sans-serif;
+    font-weight:200;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 1200px) {
+    .faculty-member {
+      width: 20%; /* 5 members per row */
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .faculty-member {
+      width: 25%; /* 4 members per row */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .faculty-member {
+      width: 33.33%; /* 3 members per row */
+    }
+    .faculty-1 {
+        font-size: 32px;
+        margin-top:0px;
+        height:150px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 600px) {
+    .faculty-member {
+      width: 50%; /* 2 members per row */
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .faculty-member {
+      width: 50%; /* 2 members per row on very small screens */
+    }
+  }
+  
+  

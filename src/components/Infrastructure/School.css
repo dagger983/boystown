@@ -1,0 +1,106 @@
+.school-video {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover; /* Ensures video fills the container without distortion */
+    min-height: 200px; /* Maintain a decent size on smaller screens */
+}
+
+/* School Infrastructure section */
+.school-infra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.school-infra2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.school-infra2 img {
+    height: 500px;
+   width:500px; /* Responsive to container */
+    margin-top: 30px;
+    cursor: default;
+    transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.school-infra2 img:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Infrastructure details section */
+.infra-details {
+    background-color: #E4F9FF;
+    padding: 40px;
+    font-family: "Outfit", sans-serif;
+    color: rgb(10, 35, 71);
+    text-transform: capitalize;
+    margin-top: 40px;
+    font-size: 1.25rem;
+}
+
+.infra-details h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/* Flex sections for each facility */
+.infra-flex {
+    background-color: #FAFAFA;
+    color: rgb(10, 35, 71);
+    margin-top: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+}
+
+.infra-flex2 {
+    max-width: 450px;
+    padding: 20px;
+}
+
+/* Image styling within flex sections */
+.infra-flex img {
+    border: 10px solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    max-width: 450px; /* Responsive max width */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .school-infra2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infra-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .infra-flex2 {
+        width: 100%; /* Full width on smaller screens */
+        padding: 20px;
+        font-size: 0.75rem;
+    }
+
+    .infra-flex img {
+        width: 300px;
+        height: 300px; 
+    }
+    .infra-details h3 {
+        font-weight: 400;
+        font-size:0.75rem;
+    }
+    .school-infra2 img {
+        height: 300px;
+       width:300px;}
+}
+

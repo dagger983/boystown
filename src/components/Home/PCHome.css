@@ -1,0 +1,157 @@
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #22355c;
+  padding: 30px;
+  color: white;
+  font-family: "Outfit";
+  font-weight: 200;
+  text-align: center;
+}
+
+.home2 h2 {
+  margin-top: 120px;
+  font-size: 40px;
+}
+.home2 p {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: 300;
+}
+.home-main {
+  background-color: #dab43f;
+  color: white;
+  font-family: "Outfit";
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-main p {
+  font-size: 32px;
+}
+
+.home-main h2 {
+  font-size: 48px;
+  margin-top: 20px;
+}
+.home-main2 {
+  background-color: #e4f9ff;
+  font-family: "Outfit";
+  padding: 30px;
+  text-align: center; 
+  height:100%;
+}
+.home-main2 h2 {
+  color: #093c36;
+  font-size: 48px;
+}
+
+.home-main3 {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  padding: 30px;
+  margin: 30px;
+ 
+}
+.home-main3 img {
+  margin-right: 50px;
+  border: 15px solid white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.home-para {
+  font-size: 24px;
+  color: #456080;
+  line-height: 36px;
+}
+
+.home-main4 {
+  color: white;
+  background-color: #22355c;
+  height: 100%;
+  padding: 80px;
+  display: flex;
+  font-family: "Outfit";
+  justify-content: space-evenly;
+}
+
+.home-main4 h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.home-main4 p {
+  margin-top: 30px;
+  font-weight: 250;
+  text-align: right;
+  font-size: 20px;
+  line-height: 30px;
+}
+.home-main4 img {
+  border: 15px solid white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.home-main5 {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Outfit";
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+.home-main5 h2 {
+  color: #093c36;
+  font-size: 48px;
+  margin-top: 42px;
+  text-align: center;
+}
+
+.home-main5 p {
+  font-size: 20px;
+  margin-top: 32px;
+  text-align: left;
+}
+
+.home-main5 img {
+  margin-right: 42px;
+  height:350px;
+}
+.home-main6 {
+  background-color: #dab43f;
+  height: 400px;
+  padding: 45px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-family: "Outfit";
+}
+
+.home-main6 div {
+  text-align:right;
+  margin-top: 45px;
+}
+.home-main6 p {
+  font-size: 20px;
+  margin-top: 30px;
+}
+.home-main6 h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.home-main6 img {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.home p,
+.home-para,
+.home-main4 p,
+.home-main5 p,
+.home-main6 p {
+  white-space: normal;
+}
+
+

@@ -1,0 +1,134 @@
+.mobhome-1 {
+  background-color: #22355c;
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  font-family: "outfit";
+}
+.mobhome-1 h2 {
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.mobhome-1 img {
+  height: 300px;
+  border: 10px solid white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mobhome-1 p {
+  font-size: small;
+}
+
+.mobhome-2 {
+  background-color: #dab43f;
+  padding: 20px;
+  height: 200px;
+  font-family: "outfit";
+  text-align: center;
+  color: white;
+}
+.mobhome-2 h3 {
+  font-size: large;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.mobhome-2 h2 {
+  font-size: xx-large;
+  font-weight: 600;
+}
+.mobhome-3 {
+  background-color: #e4f9ff;
+  padding: 20px;
+  height: 100%;
+  color: #093c36;
+  font-family: "outfit";
+  text-align: center;
+}
+
+.mobhome-3 img {
+  height: 250px;
+  border: 10px solid white;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.mobhome-3 p {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: small;
+}
+
+.mobhome-4 {
+  background-color: #22355c;
+  color: white;
+  font-family: "outfit";
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobhome-4 p {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: small;
+}
+
+.mobhome-4 img {
+  height: 250px;
+  width: 80vw;
+  border: 10px solid white;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.mobhome-5 {
+    font-family: "outfit";
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobhome-5 p {
+    text-align: left;
+    margin-left: 20px;
+    font-size: small;
+  }
+  
+  .mobhome-5 img {
+    height: 250px;
+    width:300px;
+    border: 10px solid white;
+  }
+  
+
+
+  .mobhome-6 {
+    background-color: #dab43f;
+    color: white;
+    font-family: "outfit";
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobhome-6 p {
+    text-align: left;
+    margin-left: 20px;
+    font-size: small;
+  }
+  
+  .mobhome-6 img {
+    height: 200px;
+    width:280px;
+  }
+  

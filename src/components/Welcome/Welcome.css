@@ -1,0 +1,42 @@
+.video-bg-container {
+  position: relative;
+  height: 75vh; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content-overlay {
+  position: absolute;
+  font-size: 3rem;
+  text-align: center;
+  color: white; 
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Anton', sans-serif;  
+  line-height: 1.2;
+  margin-top:210px;
+}
+.content-bt{
+    background-color: #E4F9FF;
+    height:30px;
+}
+
+@media screen and (max-width:768px){
+  .content-overlay {
+    font-size: x-large;
+  }
+}

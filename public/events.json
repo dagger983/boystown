@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Annual Day Highlights",
+    "desc": "Celebrate the joy and achievements of our Annual Day with a captivating collection of images from the event! This page showcases the memorable moments and vibrant activities that marked this special occasion. From inspiring performances to heartfelt speeches and joyous celebrations, explore the gallery to relive the highlights and experience the enthusiasm that filled the day. Dive into the visuals and share in the excitement of our Annual Day’s festivities!",
+    "img": "/annualday.jpg",
+    "path": "/annual-day"
+  },
+  {
+    "name": "Sports Day Highlights",
+    "desc": "Relive the excitement of our annual Sports Day with a gallery of action-packed moments! This page features a vibrant collection of images capturing the energy and enthusiasm of athletes competing in various events. From thrilling races to celebratory victories, explore the highlights and see the smiles and determination that made this day unforgettable. Dive into the fun and see the spirit of teamwork and competition in every snapshot!",
+    "img": "/sportsday.webp",
+    "path": "/sports-day"
+  },
+  {
+    "name": "Antofesta",
+    "desc": "Antofesta is a vibrant annual festival celebrated at St. Antony's Higher Secondary School, showcasing a blend of cultural performances, educational exhibits, and fun activities. It brings together students, teachers, and the local community to foster creativity, teamwork, and school spirit in a lively atmosphere.",
+    "img": "/antofesta.jpg",
+    "path": "/antofesta"
+  },
+  {
+    "name": "Club and Activities",
+    "desc": "Dive into the vibrant world of our clubs and extracurricular activities! This page features a dynamic collection of images showcasing the diverse range of clubs and activities that bring our community together. From creative arts and sports to community service and academic clubs, explore the moments of enthusiasm, teamwork, and achievement that define our vibrant extracurricular landscape. See how our members engage, grow, and make a difference through their passions and pursuits.",
+    "img": "/ca.jpg",
+    "path": "/club-and-activities"
+  },
+  {
+    "name": "Academic Activities",
+    "desc": "Explore the enriching world of our academic activities through this page! Featuring a range of images from lectures, workshops, and interactive sessions, this gallery showcases the dynamic learning experiences that have shaped our academic year. From engaging classroom moments to thought-provoking seminars and collaborative projects, immerse yourself in the vibrant academic life that fuels our community's pursuit of knowledge and excellence.",
+    "img": "/academic.webp",
+    "path": "/academic-activities"
+  },
+  {
+    "name": "Extracurricular Activities",
+    "desc": "Discover the diverse range of extracurricular activities that enrich our community! This page features a collection of images highlighting the dynamic and engaging events beyond the classroom. From spirited club meetings and creative workshops to energetic sports and impactful community service, see how our members explore their passions, develop new skills, and foster connections. Explore the vibrant experiences that make our extracurricular landscape truly exceptional!",
+    "img": "/eca.webp",
+    "path": "/extracurricular-activities"
+  }
+]

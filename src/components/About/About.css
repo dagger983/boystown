@@ -1,0 +1,109 @@
+/* General Styles */
+.about {
+    background-color: #22355c;
+    height: 200px;
+    font-family: "Nimbus Sans L", sans-serif;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+/* About Section 2 */
+.abt-2 {
+    background-color: #d4af37;
+    font-family: "Outfit", sans-serif;
+    color: white;
+    padding: 30px;
+    font-size: large;
+}
+
+.abt-2 h3 {
+    font-weight: 200;
+}
+
+/* About Section 3 (flex layout) */
+.abt-3 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    font-family: "Outfit", sans-serif;
+    color: #22355c;
+    background-color: #E4F9FF;
+}
+
+.abt-3 div {
+    margin: 30px;
+    flex: 1;
+    min-width: 300px; /* Ensures columns don't shrink too much */
+}
+
+.abt-3 p {
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+/* Image styling */
+.abt-3 img {
+    width: 500px;
+    border:10px solid white;
+    height: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .abt-3 img {
+        width: 100%;
+        height: auto;
+    }
+    .about {
+        font-size: 40px;
+        padding: 20px;
+        height: auto;
+    }
+
+    /* Reduce padding and font sizes for smaller screens */
+    .abt-2 {
+        padding: 20px;
+        font-size: medium;
+    }
+
+    .abt-3 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .abt-3 div {
+        margin: 20px 0;
+    }
+
+    .abt-3 p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller screens (e.g., mobile phones) */
+    .about {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .abt-2 {
+        font-size: small;
+        padding: 15px;
+    }
+
+    .abt-3 {
+        padding: 15px;
+    }
+
+    .abt-3 p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

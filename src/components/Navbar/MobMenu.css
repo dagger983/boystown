@@ -1,0 +1,23 @@
+.close-icon-main{
+    display: flex;
+    justify-content: end;
+    padding:30px;
+}
+
+.close-icon{
+    font-size:18px;
+}
+
+.Mobmenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nimbus Sans L", sans-serif;
+}
+
+
+.Mobmenu p {
+    margin-top:50px;
+    color:rgb(3, 3, 83);
+}
