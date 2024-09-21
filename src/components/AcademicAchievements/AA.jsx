@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ScaleLoader } from "react-spinners"; // Import the ScaleLoader
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 import "./AA.css";
 
 const AA = () => {
@@ -9,6 +11,8 @@ const AA = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with animation duration
+
     const fetchExamData = async () => {
       try {
         const sslcResponse = await fetch("https://appsail-50022339494.development.catalystappsail.in/sslc");
@@ -50,10 +54,10 @@ const AA = () => {
 
   return (
     <>
-      <div className="aa">
+      <div className="aa" data-aos="fade-up">
         <h2>ACADEMIC ACHIEVEMENTS</h2>
       </div>
-      <div className="aa-2">
+      <div className="aa-2" data-aos="fade-left">
         <h3>
           At St. Antony’s Higher Secondary School, our students consistently
           achieve outstanding results in their 10th, 11th, and 12th-grade
@@ -71,7 +75,7 @@ const AA = () => {
       </div>
 
       {/* SSLC Exam Report */}
-      <div className="report-container">
+      <div className="report-container" data-aos="fade-up">
         <h2>Final SSLC Exam Report for Our School</h2>
         <table className="exam-report-table">
           <thead>
@@ -96,7 +100,7 @@ const AA = () => {
       </div>
 
       {/* HSC Exam Report */}
-      <div className="report-container">
+      <div className="report-container" data-aos="fade-up">
         <h2>Final HSC Exam Report for Our School</h2>
         <table className="exam-report-table">
           <thead>

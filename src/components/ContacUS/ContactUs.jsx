@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 import "./Contact.css";
+
 const ContactUs = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS
+  }, []);
+
   return (
     <>
-      <div className="contactContainer-main">
+      <div className="contactContainer-main" data-aos="fade-up">
         <div className="contactContainer">
           <div>
             <h2>
@@ -19,8 +26,8 @@ const ContactUs = () => {
                   For more information or to schedule a visit, please contact us
                   at:
                 </li>
-                <li>Address: Manjampatty, Manapparai,Tiruchirappalli-621307</li>
-                <li>Phone:9487739948</li>
+                <li>Address: Manjampatty, Manapparai, Tiruchirappalli-621307</li>
+                <li>Phone: 9487739948</li>
                 <li>Email: aidhss20440062manj@gmail.com</li>
                 <li>Office Hours: 9.00am To 4.00pm</li>
               </ul>
@@ -29,10 +36,10 @@ const ContactUs = () => {
         </div>
         <div className="contactContainer2">
           <div className="contactContainer2-main">
-            <div>
-              <img src="/kolanthai.webp" alt="" />
+            <div data-aos="fade-right">
+              <img src="/kolanthai.webp" alt="Contact" />
             </div>
-            <div>
+            <div data-aos="fade-left">
               <form action="">
                 <h2 style={{ color: "#12274a" }}>Contact Us</h2>
                 <br />

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./PCHome.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const PCHome = () => {
   const [isMobileView, setIsMobileView] = useState(false);
 
-  
   const checkViewportWidth = () => {
     if (window.innerWidth <= 768) {
       setIsMobileView(true);
@@ -15,15 +16,22 @@ const PCHome = () => {
 
   useEffect(() => {
     checkViewportWidth(); 
-    window.addEventListener("resize", checkViewportWidth); 
+    window.addEventListener("resize", checkViewportWidth);
+    
+    // Initialize AOS when the component mounts
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Whether animation should happen only once
+    });
+
     return () => {
-      window.removeEventListener("resize", checkViewportWidth); 
+      window.removeEventListener("resize", checkViewportWidth);
     };
   }, []);
 
   return (
     <>
-      <div className="home">
+      <div className="home" data-aos="fade-up">
         <div className="home2">
           <h2>
             Welcome to <br /> St. Antony's Higher Secondary School
@@ -47,12 +55,12 @@ const PCHome = () => {
         </div>
       </div>
 
-      <div className="home-main">
+      <div className="home-main" data-aos="fade-up">
         <p>THEME OF THE YEAR</p>
         <h2>"Empowering Education Through Metacognition"</h2>
       </div>
 
-      <div className="home-main2">
+      <div className="home-main2" data-aos="fade-right">
         <div>
           <h2>Our Founder - Louis Marie Grignion de Montfort</h2>
           <div className="home-main3">
@@ -86,7 +94,7 @@ const PCHome = () => {
         </div>
       </div>
 
-      <div className="home-main4">
+      <div className="home-main4" data-aos="fade-left">
         <div>
           <h2>Our Head Master</h2>
           <p>
@@ -113,7 +121,7 @@ const PCHome = () => {
         </div>
       </div>
 
-      <div className="home-main5">
+      <div className="home-main5" data-aos="zoom-in">
         <div>
           <img src="/mission.gif" alt="" />
         </div>
@@ -144,7 +152,7 @@ const PCHome = () => {
         </div>
       </div>
 
-      <div className="home-main6">
+      <div className="home-main6" data-aos="fade-up">
         <div>
           <h2>Our Vision</h2>
           <p>

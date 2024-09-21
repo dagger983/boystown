@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { ScaleLoader } from "react-spinners"; // Import the ScaleLoader
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 import "./Faculty.css";
 
 const FacultyMember = ({ name, department, image }) => (
-  <div className="faculty-member">
-    <img src={image}  />
+  <div className="faculty-member" data-aos="fade-up">
+    <img src={image} alt={name} />
     <h2>{name}</h2>
     <p>{department}</p>
   </div>
@@ -17,6 +19,8 @@ const Faculty = () => {
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS
+
     const fetchData = async () => {
       try {
         const regularResponse = await fetch("https://appsail-50022339494.development.catalystappsail.in/regularStaff");
@@ -42,10 +46,10 @@ const Faculty = () => {
 
   return (
     <>
-      <div className="faculty-1">
+      <div className="faculty-1" data-aos="fade-up">
         <h2>FACULTY</h2>
       </div>
-      <div className="faculty-2">
+      <div className="faculty-2" data-aos="fade-left">
         <h3>
           At St Antony's Higher Secondary School, the faculty is a dedicated
           team of educators committed to fostering academic excellence and
@@ -73,7 +77,7 @@ const Faculty = () => {
         </div>
       ) : (
         <>
-          <h4 className="facultyType">Regular Staff</h4>
+          <h4 className="facultyType" data-aos="fade-up">Regular Staff</h4>
           <div className="faculty-grid">
             {members.map((member, index) => (
               <FacultyMember 
@@ -85,7 +89,7 @@ const Faculty = () => {
             ))}
           </div>
 
-          <h4 className="facultyType">Management Staff</h4>
+          <h4 className="facultyType" data-aos="fade-up">Management Staff</h4>
           <div className="faculty-grid">
             {members2.map((member, index) => (
               <FacultyMember 
@@ -97,7 +101,7 @@ const Faculty = () => {
             ))}
           </div>
 
-          <h4 className="facultyType">Office Staff</h4>
+          <h4 className="facultyType" data-aos="fade-up">Office Staff</h4>
           <div className="faculty-grid">       
             {members3.map((member, index) => (
               <FacultyMember 

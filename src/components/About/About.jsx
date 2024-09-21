@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS styles
 import "./About.css";
+
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS
+  }, []);
+
   return (
     <>
-      <div className="about">
+      <div className="about" data-aos="fade-up">
         <h2>About</h2>
       </div>
-      <div className="abt-2">
+      <div className="abt-2" data-aos="fade-left">
         <h3>
           St. Antony's Higher Secondary School in Manjamapatty is a reputable
           institution known for its strong academic program and holistic
@@ -20,30 +27,30 @@ const About = () => {
       </div>
       <div className="abt-3">
         <div>
-          <div>
+          <div data-aos="fade-up">
             <h2>
               The Journey of Manapparai School: A Legacy of Growth and
-              Transformation ​
+              Transformation
             </h2>
             <p>
               Founding and Early Development (1941-1961) <br /> Fr. Arulanandan,
-              the parish priest of Manapparai from 1940 to 1958, <br />{" "}
+              the parish priest of Manapparai from 1940 to 1958, <br />
               established a primary school at Manjampatty on June 13, 1941,{" "}
               <br /> with an initial enrollment of 51 boys and girls. <br /> The
               school grew steadily and eventually reached a student strength of
               525. <br />
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h2>Montfort Brothers Take Over (1961-1975)</h2>
             <p>
               The school was handed over to the Montfort Brothers of St.
-              Gabriel, <br />a dedicated congregation known for their commitment
+              Gabriel, <br /> a dedicated congregation known for their commitment
               to education. <br /> On June 9, 1961, the Montfort Brothers
               upgraded the school to a middle school. ​<br />
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h2>Expansion and Upgradation (1975-1990)</h2>
             <p>
               In 1975, the primary school campus area was acquired with future
@@ -53,7 +60,7 @@ const About = () => {
               buildings and facilities.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h2>Relocation and Further Upgradation (1990-1999)</h2>
             <p>
               Under the leadership of Bro. Xavier Montfort, then Headmaster and
@@ -64,7 +71,7 @@ const About = () => {
               also oversaw the construction of new buildings and lab facilities.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h2>Orphanage and Hostel Developments (2016-2018)</h2>
             <p>
               The school had an orphanage attached to its campus until 2016,
@@ -73,7 +80,7 @@ const About = () => {
               minimum-paid hostel in 2018.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h2>
               Introduction of English Medium and Current Leadership
               (2012-Present)
@@ -82,7 +89,7 @@ const About = () => {
               In 2012, an English medium parallel stream was introduced in
               response to parental demand. <br />
               The school continued to grow under the able administration of
-              Bro.Thiruthuvan, Bro. Antony R., Bro. Antony A., and Bro. Joseph
+              Bro. Thiruthuvan, Bro. Antony R., Bro. Antony A., and Bro. Joseph
               Sahayam. <br /> As of 2019-2020, Bro. Joseph Thomas took charge as
               Headmaster and Correspondent, continuing the Montfort Brothers'
               mission with great dedication and zeal. <br />
@@ -90,11 +97,11 @@ const About = () => {
           </div>
         </div>
         <div>
-          <div>
-            <img src="/monfort-founder.webp" />
+          <div data-aos="fade-left">
+            <img src="/monfort-founder.webp" alt="Montfort Founder" />
           </div>
-          <div>
-            <img src="/abt2.webp" />
+          <div data-aos="fade-left">
+            <img src="/abt2.webp" alt="About Image" />
           </div>
         </div>
       </div>

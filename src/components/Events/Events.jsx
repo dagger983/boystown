@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ScaleLoader } from "react-spinners"; // Import ScaleLoader from react-spinners
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "./Events.css";
 
 const Events = () => {
@@ -8,6 +10,8 @@ const Events = () => {
   const [loading, setLoading] = useState(true); // State to manage loading
 
   useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with animation duration
+
     const fetchData = async () => {
       try {
         const response = await fetch("/events.json");
@@ -26,10 +30,10 @@ const Events = () => {
   return (
     <>
       <div className="events">
-        <h2>Events</h2>
+        <h2 data-aos="fade-up">Events</h2>
       </div>
       <div className="events2">
-        <h3>
+        <h3 data-aos="fade-left">
           St. Antony's Higher Secondary School hosts a variety of key events
           throughout the year. Annual Day features student performances, awards,
           and a concluding speech, showcasing academic and artistic
@@ -43,7 +47,7 @@ const Events = () => {
       </div>
 
       {loading ? (
-        <div className="spinner-container">
+        <div className="spinner-container" data-aos="fade-in">
           <ScaleLoader
             height={50}
             width={5}
@@ -56,12 +60,12 @@ const Events = () => {
       ) : (
         data.length > 0 &&
         data.map((event, index) => (
-          <div className="event-main" key={index}>
+          <div className="event-main" key={index} data-aos="fade-up">
             <div className="events-list">
-              <div>
-                <img src={event.img} alt={event.name} />
+              <div data-aos="fade-right">
+                <img src={event.img} alt={event.name} loading="lazy" />
               </div>
-              <div className="events-details">
+              <div className="events-details" data-aos="fade-left">
                 <h2>{event.name}</h2>
                 <p>{event.desc}</p>
                 <Link to={event.path} className="event-link">
