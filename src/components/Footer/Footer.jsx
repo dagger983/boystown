@@ -1,23 +1,17 @@
-import React, { useEffect } from "react";
-import AOS from "aos"; // Import AOS
-import "aos/dist/aos.css"; // Import AOS styles
+import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS
-  }, []);
-
   return (
     <>
-      <footer className="footer" data-aos="fade-up">
-        <div className="footer-section logo" data-aos="fade-right">
+      <footer className="footer">
+        <div className="footer-section logo">
           <img src="/btlogo.webp" alt="School Logo" className="footer-logo" />
         </div>
 
-        <div className="footer-section contact-info" data-aos="fade-up">
+        <div className="footer-section contact-info">
           <p>Manjampatty, Manapparai, Tiruchirappalli - 621307</p>
           <p>
             <a href="tel:+919487739948">+91 9487739948</a>
@@ -29,8 +23,8 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="footer-section contact-form" data-aos="fade-left">
-          <form   action="https://formspree.io/f/xeojbklq" method="POST">
+        <div className="footer-section contact-form">
+          <form action="https://formspree.io/f/xeojbklq" method="POST">
             <div className="form-group">
               <input
                 style={{
@@ -100,15 +94,15 @@ const Footer = () => {
           </form>
         </div>
 
-        <div className="footer-section social-links" data-aos="fade-up">
+        <div className="footer-section social-links">
           <p>Facebook</p>
           <p>Twitter</p>
           <p>Instagram</p>
           <p>LinkedIn</p>
         </div>
       </footer>
-      <div className="brand-watermark" >
-        <p>&copy; {currentYear} SAHSS Manjampatty. Designed and Developed by <a href="https://rategle-tech.web.app" style={{textDecoration:"underline"}}>Rategle Technologies</a>.</p>
+      <div className="brand-watermark">
+        <p>&copy; {currentYear} SAHSS Manjampatty. Designed and Developed by <a href="https://rategle-tech.web.app" style={{ textDecoration: "underline" }}>Rategle Technologies</a>.</p>
       </div>
     </>
   );
