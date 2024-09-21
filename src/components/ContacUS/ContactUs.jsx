@@ -40,7 +40,7 @@ const ContactUs = () => {
               <img src="/kolanthai.webp" alt="Contact" />
             </div>
             <div data-aos="fade-left">
-              <form action="">
+              <form   action="https://formspree.io/f/xeojbklq" method="post">
                 <h2 style={{ color: "#12274a" }}>Contact Us</h2>
                 <br />
                 <br />

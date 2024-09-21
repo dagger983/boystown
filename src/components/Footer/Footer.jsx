@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section contact-form" data-aos="fade-left">
-          <form action="#" method="POST">
+          <form   action="https://formspree.io/f/xeojbklq" method="POST">
             <div className="form-group">
               <input
                 style={{
