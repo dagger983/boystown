@@ -157,3 +157,37 @@
   border-radius: 5px;
   width: 300px;
 }
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "outfit";
+  height:100vh;
+justify-content: center;}
+
+.login button{
+  width:200px;
+  padding:10px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  margin-top:20px;
+}
+
+.login input{
+  width:200px;
+  margin-top:20px;
+  padding:10px;
+  outline: none;
+}
+.input-group select{
+  padding:8px;
+  margin-right:20px;
+}
+.input-group input{
+  margin-bottom:20px;
+  margin-top:20px;
+}

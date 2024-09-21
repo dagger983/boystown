@@ -19,10 +19,18 @@ const AdminDashboard = () => {
   const [sslc, setSslc] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  
+  // Login state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (isLoggedIn) {
+      fetchData();
+    }
+  }, [isLoggedIn]);
 
   const fetchData = async () => {
     try {
@@ -49,6 +57,49 @@ const AdminDashboard = () => {
       setLoading(false);
     }
   };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Simple authentication logic
+    if (username === 'admin' && password === 'bt@2024') {
+      setIsLoggedIn(true);
+      setLoginError('');
+    } else {
+      setLoginError('Invalid Username or Password. Please try again.');
+    }
+  };
+
+  if (!isLoggedIn) {
+    return (
+      <div className="login">
+        <h2>Login to Admin Dashboard</h2>
+        <form onSubmit={handleLogin}>
+          <div>
+        
+            <input
+              type="text"
+              value={username}
+              placeholder='Username'
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            
+            <input
+              type="password"
+              value={password}
+              placeholder='Password'
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    );
+  }
 
   if (loading) {
     return <div>Loading...</div>;

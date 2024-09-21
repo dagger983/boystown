@@ -92,14 +92,20 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
             setNewEvent({ ...newEvent, event_name: e.target.value })
           }
         />
-        <input
-          type="text"
-          placeholder="Category"
+
+        {/* Replace text input for category with a select */}
+        <select
           value={newEvent.category}
           onChange={(e) =>
             setNewEvent({ ...newEvent, category: e.target.value })
           }
-        />
+        >
+          <option value="">Select Category</option>
+          <option value="annual-day">Annual Day</option>
+          <option value="antofesta">AntoFesta</option>
+          <option value="sportsday">Sports Day</option>
+        </select>
+
         <input
           type="text"
           placeholder="Year"
@@ -144,30 +150,24 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
             <span>
               {event.event_name} - {event.category}
             </span>
-            <span>
-              {event.description}
-            </span>
-            <img
-              src={event.img1}
-              alt="Main Event"
-              style={{ width: "50px", height: "50px" }}
-            />
-            <img  src={event.img2}   style={{ width: "50px", height: "50px" }}  alt="" />
-            <img  src={event.img3}   style={{ width: "50px", height: "50px" }} alt="" />
-            <img  src={event.img4}   style={{ width: "50px", height: "50px" }} alt="" />
-            <img  src={event.img5}   style={{ width: "50px", height: "50px" }} alt="" />
-            <img  src={event.img6}   style={{ width: "50px", height: "50px" }} alt="" />
-            <img  src={event.img7}   style={{ width: "50px", height: "50px" }} alt="" />
-            <img  src={event.img8}   style={{ width: "50px", height: "50px" }} alt="" />
-            <img  src={event.img9}   style={{ width: "50px", height: "50px" }} alt="" />
-            <img  src={event.img10}  style={{ width: "50px", height: "50px" }}  alt="" />
+            <span>{event.description}</span>
+
+            {/* Ensure all 10 images are shown, with a fallback if any image is missing */}
+            {Array.from({ length: 10 }, (_, index) => (
+              <img
+                key={index}
+                src={event[`img${index + 1}`]}
+                alt="Sub Event"
+                style={{ width: "50px", height: "50px" }}
+              />
+            ))}
+
             <button
               className="delete-button"
               onClick={() => handleDelete(event.id)}
             >
               Delete
             </button>
-           
           </li>
         ))}
       </ul>
