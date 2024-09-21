@@ -1,110 +1,118 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Outfit";
+  height: auto; /* Flexible height */
+}
 
-  .container {
-    margin: 0 auto;
-    padding: 20px;
-    font-family: "Outfit";
-    height:100vh;;
-  }
-  
-  /* Title Styling */
-  .title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #1d3557;
-  }
-  
-  /* Select Dropdown Styling */
+/* Title Styling */
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1d3557;
+}
+
+/* Select Dropdown Styling */
+.select-dropdown {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+  background-color: #fff;
+  color: #1d3557;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.select-dropdown:hover {
+  border-color: #457b9d;
+}
+
+/* Event Details Box */
+.details-box {
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  height: auto; /* Flexible height */
+}
+
+.event-title {
+  font-size: 24px;
+  color: #457b9d;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Event Images */
+.event-images {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of images */
+  gap: 15px; /* Space between images */
+  justify-content: center; /* Center aligns the images */
+  margin-top: 20px;
+}
+
+.event-image {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: auto; /* Responsive sizing */
+  max-height: 400px; /* Set a max height */
+  flex: 1 1 calc(33.333% - 15px); /* Three images per row */
+  /* Ensure a bit of spacing by subtracting the gap */
+}
+
+.event-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* No Selection Message */
+.no-selection {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
   .select-dropdown {
     width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin: 0 auto;
-    display: block;
-    background-color: #fff;
-    color: #1d3557;
-    cursor: pointer;
-    transition: border-color 0.3s;
   }
-  
-  .select-dropdown:hover {
-    border-color: #457b9d;
-  }
-  
-  /* Event Details Box */
+
   .details-box {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
+    padding: 15px;
   }
-  
+
   .event-title {
-    font-size: 24px;
-    color: #457b9d;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
-  
+
   .event-description {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 16px;
   }
-  
-  /* Event Images */
-  .event-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased min width for larger images */
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
+
   .event-image {
-    width: 100%;
-    height: 300px; /* Set a larger height */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    max-height: 200px; /* Adjusted for mobile */
+    flex: 1 1 calc(50% - 10px); /* Two images per row on smaller screens */
   }
-  
-  .event-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 480px) {
+  .event-image {
+    flex: 1 1 100%; /* One image per row on very small screens */
   }
-  
-  /* No Selection Message */
-  .no-selection {
-    font-size: 18px;
-    color: #666;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .select-dropdown {
-      width: 100%;
-    }
-  
-    .details-box {
-      padding: 15px;
-    }
-  
-    .event-title {
-      font-size: 20px;
-    }
-  
-    .event-description {
-      font-size: 16px;
-    }
-  
-    .event-image {
-      height: 200px; /* Smaller height for mobile screens */
-    }
-  }
-  
+}

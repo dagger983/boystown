@@ -85,6 +85,8 @@ const OfficeStaff = ({ officeStaff, setOfficeStaff }) => {
       <ul className="list">
         {officeStaff.map((s) => (
           <li className="list-item" key={s.id}>
+            
+            <img src={s.image} alt={s.name} style={{ width: 50, height: 50, borderRadius: '50%' }} />
             <span>{s.name}</span>
             <div>
               <button className="delete-button" onClick={() => handleDelete(s.id)} disabled={isLoading}>

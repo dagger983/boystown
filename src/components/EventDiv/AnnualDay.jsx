@@ -72,10 +72,11 @@ const AnnualDay = () => {
             <div className="details-box">
               <h3 className="event-title">{eventDetails.event_name} - {eventDetails.year}</h3>
               <p className="event-description">{eventDetails.description}</p>
+              
               <div className="event-images">
                 {Object.keys(eventDetails).map((key, index) => {
                   if (key.startsWith("img") && eventDetails[key]) {
-                    return <img key={index} src={eventDetails[key]} alt={`Event ${index + 1}`} className="event-image" />;
+                    return <img key={index} src={eventDetails[key]} className='event-image' alt={`Event ${index + 1}`} />;
                   }
                   return null;
                 })}

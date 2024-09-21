@@ -103,6 +103,8 @@ const ManagementStaff = ({ managementStaff, setManagementStaff }) => {
       <ul className="list">
         {managementStaff.map((s) => (
           <li className="list-item" key={s.id}>
+            
+            <img src={s.image} alt={s.name} style={{ width: 50, height: 50, borderRadius: '50%' }} />
             <span>
               {s.name} - {s.department}
             </span>

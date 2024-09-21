@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 const SubEvent = ({ subEvent, setSubEvent }) => {
   const [newEvent, setNewEvent] = useState({
@@ -12,11 +11,20 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
   });
   const [editItem, setEditItem] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const apiUrl = "https://bt-backend.onrender.com/subEvent";
 
   const handleCreate = async () => {
     setIsLoading(true);
+    setError("");
+
     const formattedData = {
-      ...newEvent,
+      event_name: newEvent.event_name,
+      category: newEvent.category,
+      year: newEvent.year,
+      month: newEvent.month,
+      description: newEvent.description,
       img1: newEvent.image_urls[0],
       img2: newEvent.image_urls[1],
       img3: newEvent.image_urls[2],
@@ -28,23 +36,26 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img9: newEvent.image_urls[8],
       img10: newEvent.image_urls[9],
     };
+
     try {
-      const res = await axios.post(
-        "https://bt-backend.onrender.com/subEvent",
-        formattedData
-      );
-      setSubEvent([...subEvent, { id: res.data.id, ...formattedData }]);
-      alert("Sub Event added successfully!");
-      setNewEvent({
-        event_name: "",
-        category: "",
-        year: "",
-        month: "",
-        description: "",
-        image_urls: Array(10).fill(""),
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formattedData),
       });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const resData = await response.json();
+      setSubEvent([...subEvent, { id: resData.id, ...formattedData }]);
+      alert("Sub Event added successfully!");
+      resetForm();
     } catch (error) {
-      alert("Error adding Sub Event. Please try again.");
+      setError("Error adding Sub Event. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -52,12 +63,21 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
 
   const handleDelete = async (id) => {
     setIsLoading(true);
+    setError("");
+
     try {
-      await axios.delete(`https://bt-backend.onrender.com/subEvent/${id}`);
+      const response = await fetch(`${apiUrl}/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
       setSubEvent(subEvent.filter((event) => event.id !== id));
       alert("Sub Event deleted successfully!");
     } catch (error) {
-      alert("Error deleting Sub Event. Please try again.");
+      setError("Error deleting Sub Event. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -70,8 +90,14 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
 
   const handleUpdate = async () => {
     setIsLoading(true);
+    setError("");
+
     const formattedData = {
-      ...newEvent,
+      event_name: newEvent.event_name,
+      category: newEvent.category,
+      year: newEvent.year,
+      month: newEvent.month,
+      description: newEvent.description,
       img1: newEvent.image_urls[0],
       img2: newEvent.image_urls[1],
       img3: newEvent.image_urls[2],
@@ -83,48 +109,56 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img9: newEvent.image_urls[8],
       img10: newEvent.image_urls[9],
     };
+
     try {
-      const res = await axios.put(
-        `https://bt-backend.onrender.com/subEvent/${editItem.id}`,
-        formattedData
-      );
-      setSubEvent(
-        subEvent.map((event) => (event.id === res.data.id ? res.data : event))
-      );
-      alert("Sub Event updated successfully!");
-      setEditItem(null);
-      setNewEvent({
-        event_name: "",
-        category: "",
-        year: "",
-        month: "",
-        description: "",
-        image_urls: Array(10).fill(""),
+      const response = await fetch(`${apiUrl}/${editItem.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formattedData),
       });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      setSubEvent(subEvent.map((event) => (event.id === editItem.id ? { id: editItem.id, ...formattedData } : event)));
+      alert("Sub Event updated successfully!");
+      resetForm();
     } catch (error) {
-      alert("Error updating Sub Event. Please try again.");
+      setError("Error updating Sub Event. Please try again.");
     } finally {
       setIsLoading(false);
     }
   };
 
+  const resetForm = () => {
+    setNewEvent({
+      event_name: "",
+      category: "",
+      year: "",
+      month: "",
+      description: "",
+      image_urls: Array(10).fill(""),
+    });
+    setEditItem(null);
+  };
+
   return (
     <div className="section">
       <h2>{editItem ? "Edit Sub Event" : "Add Sub Event"}</h2>
+      {error && <p className="error">{error}</p>}
       <div className="input-group">
         <input
           type="text"
           placeholder="Event Name"
           value={newEvent.event_name}
-          onChange={(e) =>
-            setNewEvent({ ...newEvent, event_name: e.target.value })
-          }
+          onChange={(e) => setNewEvent({ ...newEvent, event_name: e.target.value })}
         />
         <select
           value={newEvent.category}
-          onChange={(e) =>
-            setNewEvent({ ...newEvent, category: e.target.value })
-          }
+          onChange={(e) => setNewEvent({ ...newEvent, category: e.target.value })}
         >
           <option value="">Select Category</option>
           <option value="academic-activities">Academic Activities</option>
@@ -147,9 +181,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
           type="text"
           placeholder="Description"
           value={newEvent.description}
-          onChange={(e) =>
-            setNewEvent({ ...newEvent, description: e.target.value })
-          }
+          onChange={(e) => setNewEvent({ ...newEvent, description: e.target.value })}
         />
         {newEvent.image_urls.map((url, index) => (
           <input
@@ -164,15 +196,9 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
             }}
           />
         ))}
-        {editItem ? (
-          <button className="button" onClick={handleUpdate} disabled={isLoading}>
-            {isLoading ? "Processing..." : "Update Event"}
-          </button>
-        ) : (
-          <button className="button" onClick={handleCreate} disabled={isLoading}>
-            {isLoading ? "Processing..." : "Add Event"}
-          </button>
-        )}
+        <button className="button" onClick={editItem ? handleUpdate : handleCreate} disabled={isLoading}>
+          {isLoading ? "Processing..." : editItem ? "Update Event" : "Add Event"}
+        </button>
       </div>
       <h2>Sub Event List</h2>
       <ul className="list">
@@ -181,14 +207,16 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
             <span>
               {event.event_name} - {event.category} - {event.month} {event.year}
             </span>
-            {Array.from({ length: 10 }, (_, index) => (
-              <img
-                key={index}
-                src={event[`img${index + 1}`]}
-                alt="Sub Event"
-                style={{ width: "50px", height: "50px" }}
-              />
-            ))}
+            <div className="image-gallery">
+              {Array.from({ length: 10 }, (_, index) => (
+                <img
+                  key={index}
+                  src={event[`img${index + 1}`]}
+                  alt={`Sub Event ${index + 1}`}
+                  style={{ width: "50px", height: "50px", margin: "0 5px" }}
+                />
+              ))}
+            </div>
             <div>
               <button
                 className="delete-button"
@@ -197,7 +225,13 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
               >
                 {isLoading ? "Processing..." : "Delete"}
               </button>
-            
+              <button
+                className="edit-button"
+                onClick={() => handleEdit(event)}
+                disabled={isLoading}
+              >
+                Edit
+              </button>
             </div>
           </li>
         ))}

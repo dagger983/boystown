@@ -63,7 +63,7 @@ const Events = () => {
           <div className="event-main" key={index} data-aos="fade-up">
             <div className="events-list">
               <div data-aos="fade-right">
-                <img src={event.img} alt={event.name} loading="lazy" />
+                <img src={event.img} alt={event.name}  loading="lazy" />
               </div>
               <div className="events-details" data-aos="fade-left">
                 <h2>{event.name}</h2>
