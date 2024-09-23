@@ -1,11 +1,4 @@
 User-agent: *
-Disallow:
-
-Disallow: /private/
-Disallow: /tmp/
+Disallow: 
 Disallow: /cgi-bin/
-
-User-agent: Googlebot
-Allow: /
-
 Sitemap: https://stantonyshssmanj.com/sitemap.xml
