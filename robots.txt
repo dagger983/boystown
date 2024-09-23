@@ -1,0 +1,11 @@
+User-agent: *
+Disallow:
+
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://stantonyshssmanj.com/sitemap.xml
