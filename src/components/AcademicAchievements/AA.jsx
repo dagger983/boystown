@@ -133,7 +133,7 @@ const AA = () => {
       <div className="aa" data-aos="fade-up">
         <h2>ACADEMIC ACHIEVEMENTS</h2>
       </div>
-      <div className="aa-2" data-aos="fade-left">
+      <div className="aa-2" data-aos="fade-up">
         <h3>
           At St. Antony’s Higher Secondary School, our students consistently
           achieve outstanding results in their 10th, 11th, and 12th-grade

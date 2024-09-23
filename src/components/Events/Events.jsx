@@ -9,10 +9,30 @@ import "./Events.css";
 const Events = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true); // State to manage loading
+  const [isMobile, setIsMobile] = useState(false); // State to track if device is mobile
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS with animation duration
+    // Function to check if the device is mobile based on window width
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Set true if screen width is <= 768px (mobile)
+    };
 
+    // Initial check
+    checkIsMobile();
+
+    // Add event listener for window resize to update mobile state dynamically
+    window.addEventListener("resize", checkIsMobile);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("/events.json");
@@ -102,10 +122,10 @@ const Events = () => {
             href="https://stantonyshssmanj.com/ta"
           />
         </Helmet>
-        <h1 data-aos="fade-up">Events</h1>
+        <h1 data-aos={isMobile ? "fade-up" : "fade-left"}>Events</h1>
       </div>
       <div className="events2">
-        <h3 data-aos="fade-left">
+        <h3 data-aos={isMobile ? "fade-up" : "fade-left"}>
           St. Antony's Higher Secondary School hosts a variety of key events
           throughout the year. Annual Day features student performances, awards,
           and a concluding speech, showcasing academic and artistic
@@ -134,10 +154,13 @@ const Events = () => {
         data.map((event, index) => (
           <div className="event-main" key={index} data-aos="fade-up">
             <div className="events-list">
-              <div data-aos="fade-right">
+              <div data-aos={isMobile ? "fade-up" : "fade-right"}>
                 <img src={event.img} alt={event.name} loading="lazy" />
               </div>
-              <div className="events-details" data-aos="fade-left">
+              <div
+                className="events-details"
+                data-aos={isMobile ? "fade-up" : "fade-left"}
+              >
                 <h2>{event.name}</h2>
                 <p>{event.desc}</p>
                 <Link to={event.path} className="event-link">
