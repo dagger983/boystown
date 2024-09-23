@@ -57,7 +57,7 @@ const About = () => {
 </Helmet>
         <h1>About</h1>
       </div>
-      <div className="abt-2" data-aos={isMobile ? "fade-up" : "fade-left"}>
+      <div className="abt-2" data-aos={isMobile ? "fade-up" : "fade-up"}>
         <h3>
           St. Antony's Higher Secondary School in Manjamapatty is a reputable
           institution known for its strong academic program and holistic
