@@ -1,11 +1,18 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import "./MobHome.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MobHome = () => {
+  // Initialize AOS
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
-      <div className="mobhome-1">
+      <div className="mobhome-1" data-aos="fade-up">
         <Helmet>
           <title>Home</title>
           <meta
@@ -97,12 +104,12 @@ const MobHome = () => {
         </div>
       </div>
 
-      <div className="mobhome-2">
+      <div className="mobhome-2" data-aos="fade-up">
         <h3>THEME OF THE YEAR</h3>
         <h2>"Empowering Education Through Metacognition"</h2>
       </div>
 
-      <div className="mobhome-3">
+      <div className="mobhome-3" data-aos="fade-up">
         <h2>Our Founder - Louis Marie Grignion de Montfort</h2>
         <div>
           <img src="/monfort-founder.webp" alt="" />
@@ -123,7 +130,7 @@ const MobHome = () => {
         </p>
       </div>
 
-      <div className="mobhome-4">
+      <div className="mobhome-4" data-aos="fade-up">
         <h2>Our Headmaster</h2>
         <div>
           <img src="/hmbrother.webp" alt="" />
@@ -138,11 +145,11 @@ const MobHome = () => {
           the school toward its goals of academic achievement and holistic
           growth. Under his guidance, St. Antony’s continues to uphold its
           reputation for excellence, nurturing the potential of every student
-          and preparing them for future success
+          and preparing them for future success.
         </p>
       </div>
 
-      <div className="mobhome-5">
+      <div className="mobhome-5" data-aos="fade-up">
         <h2>Our Mission</h2>
         <div>
           <img src="/mission.gif" alt="" />
@@ -159,7 +166,7 @@ const MobHome = () => {
         </p>
       </div>
 
-      <div className="mobhome-6">
+      <div className="mobhome-6" data-aos="fade-up">
         <h2>Our Vision</h2>
         <div>
           <img src="/vision.webp" alt="" />
