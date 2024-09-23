@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 import "./About.css";
@@ -12,75 +12,37 @@ const About = () => {
   return (
     <>
       <div className="about" data-aos="fade-up">
-        <Helmet>
-          <title>About</title>
-          <meta
-            name="description"
-            content="Discover St. Antony's Higher Secondary School in Manjampatty, where we provide quality education, holistic development, and a supportive learning environment for students. Enroll now!"
-          />
-          <meta
-            name="keywords"
-            content="St. Antony's Higher Secondary School, Manjampatty, quality education, holistic development, student enrollment, extracurricular activities, school facilities,Quality education in Manjampatty,School with hostel facilities in Tamil Nadu,Top school in Manjampatty,Best higher secondary school in Tamil Nadu,St. Antony's Higher Secondary School,Admission process for higher secondary schools,Best boarding schools in Tamil Nadu,School fees in Tamil Nadu,Extracurricular activities in schools,Student achievements at St. Antony,"
-          />
-          <meta name="author" content="St. Antony's Higher Secondary School" />
-          <meta name="robots" content="index, follow" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta charset="UTF-8" />
-          <meta
-            property="og:title"
-            content="St. Antony's Higher Secondary School - Excellence in Education"
-          />
-          <meta
-            property="og:description"
-            content="Providing quality education and holistic development in Manjampatty."
-          />
-          git
-          <meta
-            property="og:image"
-            content="https://stantonyshssmanj.com/btlogo.webp"
-          />
-          <meta property="og:url" content="https://stantonyshssmanj.com" />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:site_name"
-            content="St. Antony's Higher Secondary School"
-          />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content="St. Antony's Higher Secondary School"
-          />
-          <meta
-            name="twitter:description"
-            content="Quality education and holistic development for students in Manjampatty."
-          />
-          <meta
-            name="twitter:image"
-            content="https://stantonyshssmanj.com/btlogo.webp"
-          />
-          <meta name="twitter:site" content="@yourtwitterhandle" />
-          <meta name="theme-color" content="#317EFB" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="format-detection" content="telephone=no" />
-          <meta
-            name="google-site-verification"
-            content="PfgVeXPYntYcZVpdhvfEpF58Blt-T0MQze0dw_TaDGs"
-          />
-          <link
-            rel="apple-touch-icon"
-            href="https://stantonyshssmanj.com/apple-touch-icon.png"
-          />
-          <link
-            rel="alternate"
-            hreflang="en"
-            href="https://stantonyshssmanj.com"
-          />
-          <link
-            rel="alternate"
-            hreflang="ta"
-            href="https://stantonyshssmanj.com/ta"
-          />
-        </Helmet>
+      <Helmet>
+    <title>St. Antony's Higher Secondary School - Excellence in Education | Manjampatty</title>
+    <meta name="description" content="Discover St. Antony's Higher Secondary School in Manjampatty, where we provide quality education, holistic development, and a supportive learning environment for students. Enroll now!" />
+    <meta name="keywords" content="St. Antony's Higher Secondary School, Manjampatty, quality education, holistic development, student enrollment, extracurricular activities, school facilities, quality education in Manjampatty, school with hostel facilities in Tamil Nadu, top school in Manjampatty, best higher secondary school in Tamil Nadu" />
+    <meta name="author" content="St. Antony's Higher Secondary School" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="St. Antony's Higher Secondary School - Excellence in Education" />
+    <meta property="og:description" content="Providing quality education and holistic development in Manjampatty." />
+    <meta property="og:image" content="https://stantonyshssmanj.com/btlogo.webp" />
+    <meta property="og:url" content="https://stantonyshssmanj.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="St. Antony's Higher Secondary School" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="St. Antony's Higher Secondary School" />
+    <meta name="twitter:description" content="Quality education and holistic development for students in Manjampatty." />
+    <meta name="twitter:image" content="https://stantonyshssmanj.com/btlogo.webp" />
+    <meta name="twitter:site" content="@yourtwitterhandle" />
+
+    <meta name="theme-color" content="#317EFB" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="google-site-verification" content="PfgVeXPYntYcZVpdhvfEpF58Blt-T0MQze0dw_TaDGs" />
+
+    <link rel="apple-touch-icon" href="https://stantonyshssmanj.com/apple-touch-icon.png" />
+    <link rel="alternate" hreflang="en" href="https://stantonyshssmanj.com" />
+    <link rel="alternate" hreflang="ta" href="https://stantonyshssmanj.com/ta" />
+</Helmet>
+
         <h2>About</h2>
       </div>
       <div className="abt-2" data-aos="fade-left">
@@ -115,9 +77,9 @@ const About = () => {
             <h2>Montfort Brothers Take Over (1961-1975)</h2>
             <p>
               The school was handed over to the Montfort Brothers of St.
-              Gabriel, <br /> a dedicated congregation known for their
-              commitment to education. <br /> On June 9, 1961, the Montfort
-              Brothers upgraded the school to a middle school. ​<br />
+              Gabriel, <br /> a dedicated congregation known for their commitment
+              to education. <br /> On June 9, 1961, the Montfort Brothers
+              upgraded the school to a middle school. ​<br />
             </p>
           </div>
           <div data-aos="fade-up">
@@ -158,8 +120,8 @@ const About = () => {
             <p>
               In 2012, an English medium parallel stream was introduced in
               response to parental demand. <br />
-              The school continued to grow under the able administration of Bro.
-              Thiruthuvan, Bro. Antony R., Bro. Antony A., and Bro. Joseph
+              The school continued to grow under the able administration of
+              Bro. Thiruthuvan, Bro. Antony R., Bro. Antony A., and Bro. Joseph
               Sahayam. <br /> As of 2019-2020, Bro. Joseph Thomas took charge as
               Headmaster and Correspondent, continuing the Montfort Brothers'
               mission with great dedication and zeal. <br />
