@@ -1,18 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 import "./Contact.css";
 
 const ContactUs = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Mobile state
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Update mobile state based on window size
+    };
+
+    window.addEventListener("resize", handleResize); // Add resize event listener
+
     AOS.init({ duration: 1000 }); // Initialize AOS
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up event listener
+    };
   }, []);
 
   return (
     <>
-      <div className="contactContainer-main" data-aos="fade-up">
-        <Helmet>
+      <div className="contactContainer-main" data-aos={isMobile ? "fade-up" : "fade-down"}>
+      <Helmet>
           <title>Contact Us</title>
           <meta
             name="description"
@@ -84,7 +96,7 @@ const ContactUs = () => {
           />
         </Helmet>
         <div className="contactContainer">
-          <div>
+          <div data-aos={isMobile ? "fade-up" : "fade-down"}>
             <h2>
               St. Antony's Higher Secondary School welcomes applications from
               students of all backgrounds. Our admissions process is designed to
@@ -110,10 +122,10 @@ const ContactUs = () => {
         </div>
         <div className="contactContainer2">
           <div className="contactContainer2-main">
-            <div data-aos="fade-right">
+            <div data-aos={isMobile ? "fade-up" : "fade-right"}>
               <img src="/kolanthai.webp" alt="Contact" />
             </div>
-            <div data-aos="fade-left">
+            <div data-aos={isMobile ? "fade-up" : "fade-left"}>
               <form action="https://formspree.io/f/xeojbklq" method="post">
                 <h2 style={{ color: "#12274a" }}>Contact Us</h2>
                 <br />
@@ -135,4 +147,5 @@ const ContactUs = () => {
     </>
   );
 };
+
 export default ContactUs;
