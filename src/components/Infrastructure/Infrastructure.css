@@ -4,8 +4,10 @@
   background-color: #22355c;
   color: white;
   font-family: "Nimbus Sans L", sans-serif;
-  font-size: 64px;
   padding: 30px;
+}
+.infrastructure h1{
+    font-size: 64px;
 }
 .infrastructure2 {
   display: flex;
@@ -53,8 +55,11 @@
 
 @media screen and (max-width:768px){
   .infrastructure {
-    font-size:20px;
-    height:150px;
+    font-size:28px;
+    height:100px;
   }
+  .infrastructure h1{
+    font-size:20px;
+}
 
 }
