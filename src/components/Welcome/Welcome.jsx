@@ -9,10 +9,10 @@ const Welcome = () => {
           Your browser does not support the video tag.
         </video>
         <div className="content-overlay">
-          <h2>
+          <h1>
             WELCOME TO <br />
             ST ANTONY'S HIGHER SECONDARY SCHOOL
-          </h2>
+          </h1>
         </div>
       </div>
       <div className="content-bt"></div>
