@@ -6,7 +6,8 @@
 
 .admin-dashboard h1 {
   text-align: center;
-  color: #333; /* Darker text for better readability */
+  color: #333; 
+  font-size: small;
 }
 
 .section {

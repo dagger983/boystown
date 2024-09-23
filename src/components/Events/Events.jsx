@@ -122,10 +122,10 @@ const Events = () => {
             href="https://stantonyshssmanj.com/ta"
           />
         </Helmet>
-        <h1 data-aos={isMobile ? "fade-up" : "fade-left"}>Events</h1>
+        <h1 data-aos={isMobile ? "fade-down" : "fade-left"}>Events</h1>
       </div>
       <div className="events2">
-        <h3 data-aos={isMobile ? "fade-up" : "fade-left"}>
+        <h3 data-aos={isMobile ? "fade-down" : "fade-left"}>
           St. Antony's Higher Secondary School hosts a variety of key events
           throughout the year. Annual Day features student performances, awards,
           and a concluding speech, showcasing academic and artistic

@@ -1,19 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
 import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 import "./About.css";
 
 const About = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS
+
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
   }, []);
 
   return (
     <>
-      <div className="about" data-aos="fade-up">
+      <div className="about" data-aos={isMobile ? "fade-up" : "fade-up"}>
       <Helmet>
-    <title>St. Antony's Higher Secondary School - Excellence in Education | Manjampatty</title>
+    <title>Excellence in Education | Manjampatty</title>
     <meta name="description" content="Discover St. Antony's Higher Secondary School in Manjampatty, where we provide quality education, holistic development, and a supportive learning environment for students. Enroll now!" />
     <meta name="keywords" content="St. Antony's Higher Secondary School, Manjampatty, quality education, holistic development, student enrollment, extracurricular activities, school facilities, quality education in Manjampatty, school with hostel facilities in Tamil Nadu, top school in Manjampatty, best higher secondary school in Tamil Nadu" />
     <meta name="author" content="St. Antony's Higher Secondary School" />
@@ -42,10 +55,9 @@ const About = () => {
     <link rel="alternate" hreflang="en" href="https://stantonyshssmanj.com" />
     <link rel="alternate" hreflang="ta" href="https://stantonyshssmanj.com/ta" />
 </Helmet>
-
         <h1>About</h1>
       </div>
-      <div className="abt-2" data-aos="fade-left">
+      <div className="abt-2" data-aos={isMobile ? "fade-up" : "fade-left"}>
         <h3>
           St. Antony's Higher Secondary School in Manjamapatty is a reputable
           institution known for its strong academic program and holistic
@@ -129,10 +141,10 @@ const About = () => {
           </div>
         </div>
         <div>
-          <div data-aos="fade-left">
+          <div data-aos={isMobile ? "fade-up" : "fade-left"}>
             <img src="/monfort-founder.webp" alt="Montfort Founder" />
           </div>
-          <div data-aos="fade-left">
+          <div data-aos={isMobile ? "fade-up" : "fade-left"}>
             <img src="/abt2.webp" alt="About Image" />
           </div>
         </div>
