@@ -7,7 +7,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
     year: "",
     month: "",
     description: "",
-    image_urls: Array(10).fill(""),
+    image_urls: Array(9).fill(""), // Updated array length to 9
   });
   const [editItem, setEditItem] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,7 +34,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
-      img10: newEvent.image_urls[9],
+      // Removed img10
     };
 
     try {
@@ -107,7 +107,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
-      img10: newEvent.image_urls[9],
+      // Removed img10
     };
 
     try {
@@ -140,7 +140,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       year: "",
       month: "",
       description: "",
-      image_urls: Array(10).fill(""),
+      image_urls: Array(9).fill(""), // Updated array length to 9
     });
     setEditItem(null);
   };
@@ -208,7 +208,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
               {event.event_name} - {event.category} - {event.month} {event.year}
             </span>
             <div className="image-gallery">
-              {Array.from({ length: 10 }, (_, index) => (
+              {Array.from({ length: 9 }, (_, index) => (
                 <img
                   key={index}
                   src={event[`img${index + 1}`]}
