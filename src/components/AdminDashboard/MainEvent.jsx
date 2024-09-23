@@ -7,7 +7,7 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
     category: "",
     year: "",
     description: "",
-    image_urls: Array(10).fill(""),
+    image_urls: Array(9).fill(""), // Only 9 image URLs
   });
   const [editItem, setEditItem] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,6 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
-      img10: newEvent.image_urls[9],
     };
     try {
       const res = await axios.post("https://bt-backend.onrender.com/mainEvent", formattedData);
@@ -53,7 +52,6 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
-      img10: newEvent.image_urls[9],
     };
     try {
       const res = await axios.put(`https://bt-backend.onrender.com/mainEvent/${editItem.id}`, formattedData);
@@ -88,7 +86,7 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
       category: "",
       year: "",
       description: "",
-      image_urls: Array(10).fill(""),
+      image_urls: Array(9).fill(""), // Reset to 9 image URLs
     });
     setEditItem(null);
   };
@@ -150,7 +148,7 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
               {event.event_name} - {event.category}
             </span>
             <span>{event.description}</span>
-            {Array.from({ length: 10 }, (_, index) => (
+            {Array.from({ length: 9 }, (_, index) => (
               <img
                 key={index}
                 src={event[`img${index + 1}`]}
