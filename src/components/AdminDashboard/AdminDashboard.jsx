@@ -166,7 +166,7 @@ const AdminDashboard = () => {
             href="https://stantonyshssmanj.com/ta"
           />
         </Helmet>
-        <H1>Login to Admin Dashboard</H1>
+        <h1>Login to Admin Dashboard</h1>
         <form onSubmit={handleLogin}>
           <div>
             <input

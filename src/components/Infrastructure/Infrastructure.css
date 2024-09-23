@@ -6,8 +6,8 @@
   font-family: "Nimbus Sans L", sans-serif;
   padding: 30px;
 }
-.infrastructure h1{
-    font-size: 64px;
+.infrastructure h1 {
+  font-size: 64px;
 }
 .infrastructure2 {
   display: flex;
@@ -52,14 +52,12 @@
   border-radius: 5px;
 }
 
-
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px) {
   .infrastructure {
-    font-size:28px;
-    height:100px;
+    font-size: 28px;
+    height: 100px;
   }
-  .infrastructure h1{
-    font-size:20px;
-}
-
+  .infrastructure h1 {
+    font-size: 20px;
+  }
 }

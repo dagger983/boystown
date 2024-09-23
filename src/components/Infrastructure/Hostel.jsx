@@ -73,7 +73,7 @@ const Hostel = () => {
             students. Each room is spacious, well-ventilated, and furnished with
             comfortable beds, study desks, and personal storage areas. With a
             focus on cleanliness and privacy, our hostel bedrooms ensure that
-            students have a peaceful environment to rest, study, and recharge,
+            students have a peaceful environment to rest, study, and recharge-hostel,
             making it their home away from home.
           </p>
         </div>
