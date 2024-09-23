@@ -47,7 +47,6 @@ function App() {
               <Welcome />
               {isMobile ? <MobHome /> : <PCHome />}
               <FAQ />
-              <Footer />
             </>
           }
         />
@@ -57,7 +56,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <Events />
-              <Footer />
             </>
           }
         />
@@ -67,7 +65,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <AA />
-              <Footer />
             </>
           }
         />
@@ -77,7 +74,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <Faculty />
-              <Footer />
             </>
           }
         />
@@ -87,7 +83,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <Infrastructure />
-              <Footer />
             </>
           }
         />
@@ -97,7 +92,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <About />
-              <Footer />
             </>
           }
         />
@@ -107,7 +101,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <ContactUs />
-              <Footer />
             </>
           }
         />
@@ -119,7 +112,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <AnnualDay />
-              <Footer />
             </>
           }
         />
@@ -129,7 +121,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <SportsDay />
-              <Footer />
             </>
           }
         />
@@ -139,7 +130,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <Antofesta />
-              <Footer />
             </>
           }
         />
@@ -149,7 +139,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <CAC />
-              <Footer />
             </>
           }
         />
@@ -159,7 +148,6 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <ECA />
-              <Footer />
             </>
           }
         />
@@ -169,11 +157,12 @@ function App() {
             <>
               {isMobile ? <MobNavbar /> : <PCNavbar />}
               <AActivites />
-              <Footer />
             </>
           }
         />
       </Routes>
+      <Footer />
+
     </>
   );
 }
