@@ -225,13 +225,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
               >
                 {isLoading ? "Processing..." : "Delete"}
               </button>
-              <button
-                className="edit-button"
-                onClick={() => handleEdit(event)}
-                disabled={isLoading}
-              >
-                Edit
-              </button>
+           
             </div>
           </li>
         ))}
