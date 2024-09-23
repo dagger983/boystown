@@ -87,10 +87,10 @@ const MobHome = () => {
           <img src="/abt2.webp" alt="" />
         </div>
         <div>
-          <h2>
+          <h1>
             Welcome to <br />
             St. Antony's Higher Secondary School
-          </h2>
+          </h1>
           <p>
             At St. Antony's Higher Secondary School, we are committed to
             providing an exceptional educational experience that nurtures young

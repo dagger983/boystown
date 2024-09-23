@@ -125,7 +125,7 @@ const Faculty = () => {
             href="https://stantonyshssmanj.com/ta"
           />
         </Helmet>
-        <h2>FACULTY</h2>
+        <h1>FACULTY</h1>
       </div>
       <div className="faculty-2" data-aos="fade-left">
         <h3>

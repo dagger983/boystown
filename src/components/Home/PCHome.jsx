@@ -105,9 +105,9 @@ const PCHome = () => {
           />
         </Helmet>
         <div className="home2">
-          <h2>
+          <h1>
             Welcome to <br /> St. Antony's Higher Secondary School
-          </h2>
+          </h1>
           <p>
             At St. Antony's Higher Secondary School, we are committed to
             providing {isMobileView ? "" : <br />}

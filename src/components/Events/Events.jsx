@@ -102,7 +102,7 @@ const Events = () => {
             href="https://stantonyshssmanj.com/ta"
           />
         </Helmet>
-        <h2 data-aos="fade-up">Events</h2>
+        <h1 data-aos="fade-up">Events</h1>
       </div>
       <div className="events2">
         <h3 data-aos="fade-left">

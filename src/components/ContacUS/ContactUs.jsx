@@ -92,7 +92,7 @@ const ContactUs = () => {
               environment.
             </h2>
             <div>
-              <h3>Contact Us</h3>
+              <h1>Contact Us</h1>
               <ul>
                 <li>
                   For more information or to schedule a visit, please contact us

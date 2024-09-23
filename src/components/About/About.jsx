@@ -43,7 +43,7 @@ const About = () => {
     <link rel="alternate" hreflang="ta" href="https://stantonyshssmanj.com/ta" />
 </Helmet>
 
-        <h2>About</h2>
+        <h1>About</h1>
       </div>
       <div className="abt-2" data-aos="fade-left">
         <h3>
