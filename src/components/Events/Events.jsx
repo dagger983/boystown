@@ -51,7 +51,7 @@ const Events = () => {
   return (
     <>
       <div className="events">
-        <Helmet>
+      <Helmet>
           <title>Events</title>
           <meta
             name="description"
@@ -157,10 +157,7 @@ const Events = () => {
               <div data-aos={isMobile ? "fade-up" : "fade-right"}>
                 <img src={event.img} alt={event.name} loading="lazy" />
               </div>
-              <div
-                className="events-details"
-                data-aos={isMobile ? "fade-up" : "fade-left"}
-              >
+              <div className="events-details" data-aos={isMobile ? "fade-up" : "fade-left"}>
                 <h2>{event.name}</h2>
                 <p>{event.desc}</p>
                 <Link to={event.path} className="event-link">

@@ -5,8 +5,8 @@ import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 import "./Faculty.css";
 
-const FacultyMember = ({ name, department, image }) => (
-  <div className="faculty-member" data-aos="fade-up">
+const FacultyMember = ({ name, department, image, aosEffect }) => (
+  <div className="faculty-member" data-aos={aosEffect}>
     <img src={image} alt={name} />
     <h2>{name}</h2>
     <p>{department}</p>
@@ -18,9 +18,20 @@ const Faculty = () => {
   const [members2, setMembers2] = useState([]);
   const [members3, setMembers3] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile view
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS
+    AOS.init({ duration: 1000 }); // Initialize AOS for animation
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Set isMobile to true if window width <= 768px
+    };
+
+    // Call handleResize on component mount
+    handleResize();
+
+    // Add event listener to update isMobile state on window resize
+    window.addEventListener("resize", handleResize);
 
     const fetchData = async () => {
       try {
@@ -49,12 +60,17 @@ const Faculty = () => {
     };
 
     fetchData();
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <>
-      <div className="faculty-1" data-aos="fade-up">
-        <Helmet>
+      <div className="faculty-1" data-aos="fade-down">
+      <Helmet>
           <title>Faculty</title>
           <meta
             name="description"
@@ -127,18 +143,11 @@ const Faculty = () => {
         </Helmet>
         <h1>FACULTY</h1>
       </div>
-      <div className="faculty-2" data-aos="fade-left">
+      <div className="faculty-2" data-aos={isMobile ? "fade-up" : "fade-left"}>
         <h3>
           At St Antony's Higher Secondary School, the faculty is a dedicated
           team of educators committed to fostering academic excellence and
-          personal growth. Each teacher brings a wealth of knowledge and a
-          passion for their subject, creating a stimulating and supportive
-          learning environment. The staff includes experienced professionals who
-          employ innovative teaching methods to engage students and cater to
-          diverse learning needs. Their commitment extends beyond the classroom,
-          as they actively participate in extracurricular activities, mentoring
-          programs, and community service, ensuring a well-rounded education for
-          all students.
+          personal growth.
         </h3>
       </div>
 
@@ -155,7 +164,7 @@ const Faculty = () => {
         </div>
       ) : (
         <>
-          <h4 className="facultyType" data-aos="fade-up">
+          <h4 className="facultyType" data-aos={isMobile ? "fade-up" : "fade-up"}>
             Regular Staff
           </h4>
           <div className="faculty-grid">
@@ -165,11 +174,12 @@ const Faculty = () => {
                 name={member.name}
                 department={member.department}
                 image={member.image}
+                aosEffect={isMobile ? "fade-up" : "fade-right"}
               />
             ))}
           </div>
 
-          <h4 className="facultyType" data-aos="fade-up">
+          <h4 className="facultyType" data-aos={isMobile ? "fade-up" : "fade-up"}>
             Management Staff
           </h4>
           <div className="faculty-grid">
@@ -179,11 +189,12 @@ const Faculty = () => {
                 name={member.name}
                 department={member.department}
                 image={member.image}
+                aosEffect={isMobile ? "fade-up" : "fade-right"}
               />
             ))}
           </div>
 
-          <h4 className="facultyType" data-aos="fade-up">
+          <h4 className="facultyType" data-aos={isMobile ? "fade-up" : "fade-up"}>
             Office Staff
           </h4>
           <div className="faculty-grid">
@@ -193,6 +204,7 @@ const Faculty = () => {
                 name={member.name}
                 department={member.department}
                 image={member.image}
+                aosEffect={isMobile ? "fade-up" : "fade-right"}
               />
             ))}
           </div>

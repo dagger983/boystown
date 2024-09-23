@@ -8,9 +8,25 @@ import 'aos/dist/aos.css'; // Import AOS styles
 
 const Infrastructure = () => {
   const [activeTab, setActiveTab] = useState('school'); // Default tab is 'school'
+  const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile view
 
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Set isMobile to true if window width <= 768px
+    };
+
+    // Call handleResize on component mount
+    handleResize();
+
+    // Add event listener to update isMobile state on window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -91,7 +107,7 @@ const Infrastructure = () => {
       </div>
       <br />
       <br />
-      <div className="tab-section" data-aos="fade-up">
+      <div className="tab-section" data-aos={isMobile ? "fade-up" : "slide-right"}>
         <button
           className={`tab-button ${activeTab === 'school' ? 'active' : ''}`}
           onClick={() => setActiveTab('school')}
@@ -106,7 +122,7 @@ const Infrastructure = () => {
         </button>
       </div>
 
-      <div className="tab-content" data-aos="fade-up">
+      <div className="tab-content" data-aos={isMobile ? "fade-up" : "fade-up"}>
         {activeTab === 'school' && <School />}
         {activeTab === 'hostel' && <Hostel />}
       </div>
