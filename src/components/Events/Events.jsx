@@ -32,7 +32,7 @@ const Events = () => {
     <>
       <div className="events">
       <Helmet>
-        <title>My Page Title</title>
+        <title>Events</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <h2 data-aos="fade-up">Events</h2>

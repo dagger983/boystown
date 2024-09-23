@@ -49,7 +49,7 @@ const Faculty = () => {
     <>
       <div className="faculty-1" data-aos="fade-up">
       <Helmet>
-        <title>My Page Title</title>
+        <title>Faculty</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <h2>FACULTY</h2>

@@ -38,7 +38,7 @@ const AA = () => {
     return (
       <div className="spinner-container">
          <Helmet>
-        <title>My Page Title</title>
+        <title>Academic Achievements</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <ScaleLoader

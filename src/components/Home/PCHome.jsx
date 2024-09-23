@@ -34,7 +34,7 @@ const PCHome = () => {
     <>
       <div className="home" data-aos="fade-up">
       <Helmet>
-        <title>My Page Title</title>
+        <title>Home</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <div className="home2">

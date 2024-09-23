@@ -13,7 +13,7 @@ const ContactUs = () => {
     <>
       <div className="contactContainer-main" data-aos="fade-up">
       <Helmet>
-        <title>My Page Title</title>
+        <title>Contact Us</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <div className="contactContainer">

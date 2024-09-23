@@ -74,7 +74,7 @@ const AdminDashboard = () => {
     return (
       <div className="login">
         <Helmet>
-        <title>Login to Admin Dashboard</title>
+        <title>Admin Dashboard</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <h2>Login to Admin Dashboard</h2>

@@ -17,7 +17,7 @@ const Infrastructure = () => {
     <>
       <div className="infrastructure" data-aos="fade-up">
       <Helmet>
-        <title>My Page Title</title>
+        <title>Infrastructure</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <h2>INFRASTRUCTURE</h2>

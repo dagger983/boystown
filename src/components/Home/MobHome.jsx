@@ -13,7 +13,7 @@ const MobHome = () => {
     <>
       <div className="mobhome-1" data-aos="fade-up">
       <Helmet>
-        <title>My Page Title</title>
+        <title>Home</title>
         <meta name="description" content="This is a description of my page" />
       </Helmet>
         <div>
