@@ -12,6 +12,10 @@ const ContactUs = () => {
   return (
     <>
       <div className="contactContainer-main" data-aos="fade-up">
+      <Helmet>
+        <title>My Page Title</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <div className="contactContainer">
           <div>
             <h2>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from 'react-helmet';
 import { ScaleLoader } from "react-spinners"; // Import the ScaleLoader
 import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
@@ -47,6 +48,10 @@ const Faculty = () => {
   return (
     <>
       <div className="faculty-1" data-aos="fade-up">
+      <Helmet>
+        <title>My Page Title</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <h2>FACULTY</h2>
       </div>
       <div className="faculty-2" data-aos="fade-left">

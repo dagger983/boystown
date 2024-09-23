@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import './Infrastructure.css';
 import School from './School';
 import Hostel from './Hostel';
@@ -15,6 +16,10 @@ const Infrastructure = () => {
   return (
     <>
       <div className="infrastructure" data-aos="fade-up">
+      <Helmet>
+        <title>My Page Title</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <h2>INFRASTRUCTURE</h2>
       </div>
       <br />

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import "./MobHome.css";
@@ -11,6 +12,10 @@ const MobHome = () => {
   return (
     <>
       <div className="mobhome-1" data-aos="fade-up">
+      <Helmet>
+        <title>My Page Title</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <div>
           <img src="/abt2.webp" alt="" />
         </div>

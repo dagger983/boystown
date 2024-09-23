@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 import { ScaleLoader } from "react-spinners"; // Import ScaleLoader from react-spinners
 import AOS from "aos";
@@ -30,6 +31,10 @@ const Events = () => {
   return (
     <>
       <div className="events">
+      <Helmet>
+        <title>My Page Title</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <h2 data-aos="fade-up">Events</h2>
       </div>
       <div className="events2">
