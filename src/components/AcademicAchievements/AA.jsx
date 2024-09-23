@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import { ScaleLoader } from "react-spinners"; // Import the ScaleLoader
 import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
@@ -36,6 +37,10 @@ const AA = () => {
   if (loading) {
     return (
       <div className="spinner-container">
+         <Helmet>
+        <title>My Page Title</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <ScaleLoader
           height={50}
           width={5}

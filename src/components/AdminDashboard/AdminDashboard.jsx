@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import ManagementStaff from './ManagementStaff';
 import RegularStaff from './RegularStaff'; // Import RegularStaff
@@ -72,6 +73,10 @@ const AdminDashboard = () => {
   if (!isLoggedIn) {
     return (
       <div className="login">
+        <Helmet>
+        <title>Login to Admin Dashboard</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <h2>Login to Admin Dashboard</h2>
         <form onSubmit={handleLogin}>
           <div>

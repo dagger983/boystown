@@ -101,7 +101,7 @@ const AActivites = () => {
         ) : (
           eventDetails ? (
             <div className="details-box">
-              <h3 className="event-title">{eventDetails["event-name"]} - {eventDetails.month} {eventDetails.year}</h3>
+              <h3 className="event-title">{eventDetails["event_name"]} - {eventDetails.month} {eventDetails.year}</h3>
               <p className="event-description">{eventDetails.description}</p>
               <div className="event-images">
                 {Object.keys(eventDetails).map((key, index) => {

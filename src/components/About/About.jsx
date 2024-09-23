@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS styles
 import "./About.css";
@@ -11,6 +12,10 @@ const About = () => {
   return (
     <>
       <div className="about" data-aos="fade-up">
+      <Helmet>
+        <title>About</title>
+        <meta name="description" content="This is a description of my page" />
+      </Helmet>
         <h2>About</h2>
       </div>
       <div className="abt-2" data-aos="fade-left">
