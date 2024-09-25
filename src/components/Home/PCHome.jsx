@@ -104,6 +104,7 @@ const PCHome = () => {
             href="https://stantonyshssmanj.com/ta"
           />
         </Helmet>
+        
         <div className="home2">
           <h1>
             Welcome to <br /> St. Antony's Higher Secondary School
