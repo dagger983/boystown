@@ -142,7 +142,7 @@ const MobHome = () => {
           and personal development, Bro. Thomas is dedicated to creating an
           environment where students can thrive. His approachable leadership
           style and innovative mindset inspire both students and staff, driving
-          the school toward its goals of academic achievement and holistic
+          the school toward its goals of academic achievement and wholistic
           growth. Under his guidance, St. Antony’s continues to uphold its
           reputation for excellence, nurturing the potential of every student
           and preparing them for future success.
@@ -156,12 +156,13 @@ const MobHome = () => {
         </div>
         <p>
           Wholistic Education: To provide an education that balances academic
-          rigor with the development of physical, emotional, and social skills.
+          rigor with the development of physical, emotional, and social skills. <br />
           Moral Integrity: To instill a strong moral compass in our students,
-          guiding them to make ethical decisions throughout their lives.
+          guiding them to make ethical decisions throughout their lives. <br />
           Community Engagement: To encourage students to engage with and
           contribute to their communities, fostering a sense of social
-          responsibility. Innovation: To embrace and integrate modern teaching
+          responsibility. <br />
+           Innovation: To embrace and integrate modern teaching
           methods and technologies that prepare students for the future.
         </p>
       </div>
