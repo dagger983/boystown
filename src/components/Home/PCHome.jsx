@@ -182,7 +182,7 @@ const PCHome = () => {
             style and innovative mindset inspire both students and{" "}
             {isMobileView ? "" : <br />}
             staff, driving the school toward its goals of academic achievement{" "}
-            {isMobileView ? "" : <br />} and holistic growth. Under his
+            {isMobileView ? "" : <br />} and wholistic growth. Under his
             guidance, St. Antony’s continues to {isMobileView ? "" : <br />}
             uphold its reputation for excellence, nurturing the potential of{" "}
             {isMobileView ? "" : <br />} every student and preparing them for
