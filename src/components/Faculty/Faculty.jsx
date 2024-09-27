@@ -144,7 +144,7 @@ const Faculty = () => {
         <h1>FACULTY</h1>
       </div>
       <div className="faculty-2" data-aos={isMobile ? "fade-up" : "fade-left"}>
-        <h3>
+        <h3 style={{textAlign:"center"}}>
           At St Antony's Higher Secondary School, the faculty is a dedicated
           team of educators committed to fostering academic excellence and
           personal growth.
