@@ -2,7 +2,8 @@
   margin: 0 auto;
   padding: 20px;
   font-family: "Outfit";
-  height: auto; /* Flexible height */
+  height: auto;
+  text-transform: capitalize; /* Flexible height */
 }
 
 /* Title Styling */
@@ -27,6 +28,7 @@
   color: #1d3557;
   cursor: pointer;
   transition: border-color 0.3s;
+  text-transform: capitalize;
 }
 
 .select-dropdown:hover {
@@ -49,12 +51,14 @@
   font-size: 24px;
   color: #457b9d;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .event-description {
   font-size: 18px;
   color: #333;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 /* Event Images */
@@ -87,6 +91,7 @@
   color: #666;
   text-align: center;
   margin-top: 20px;
+  text-transform: capitalize;
 }
 
 /* Responsive Styling */
