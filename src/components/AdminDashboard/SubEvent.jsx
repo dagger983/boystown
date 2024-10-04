@@ -140,7 +140,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       year: "",
       month: "",
       description: "",
-      image_urls: Array(9).fill(""), // Updated array length to 9
+      image_urls: Array(9).fill(""), 
     });
     setEditItem(null);
   };
