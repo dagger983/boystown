@@ -7,7 +7,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
     year: "",
     month: "",
     description: "",
-    image_urls: Array(9).fill(""), // Updated array length to 9
+    image_urls: Array(12).fill(""), // Updated array length to 12
   });
   const [editItem, setEditItem] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,6 +34,9 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
+      img10: newEvent.image_urls[9],
+      img11: newEvent.image_urls[10],
+      img12: newEvent.image_urls[11],
     };
 
     try {
@@ -106,6 +109,9 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
+      img10: newEvent.image_urls[9],
+      img11: newEvent.image_urls[10],
+      img12: newEvent.image_urls[11],
     };
 
     try {
@@ -142,7 +148,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       year: "",
       month: "",
       description: "",
-      image_urls: Array(9).fill(""),
+      image_urls: Array(12).fill(""),
     });
     setEditItem(null);
   };
@@ -239,4 +245,3 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
 };
 
 export default SubEvent;
-  
