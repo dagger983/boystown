@@ -16,6 +16,9 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
     img7: "",
     img8: "",
     img9: "",
+    img10: "",
+    img11: "",
+    img12: "",
   });
   const [editItem, setEditItem] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -44,6 +47,9 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
       img7: "",
       img8: "",
       img9: "",
+      img10: "",
+      img11: "",
+      img12: "",
     });
     setEditItem(null);
   };
@@ -66,9 +72,11 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
           );
 
       if (editItem) {
-        setMainEvent(mainEvent.map((event) =>
-          event.id === res.data.id ? { ...res.data } : event
-        ));
+        setMainEvent(
+          mainEvent.map((event) =>
+            event.id === res.data.id ? { ...res.data } : event
+          )
+        );
         alert("Event updated successfully!");
       } else {
         setMainEvent([...mainEvent, { id: res.data.id, ...newEvent }]);
@@ -130,60 +138,17 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
         />
 
         {/* Separate inputs for each image */}
-        <input
-          type="text"
-          placeholder="Image URL 1"
-          value={newEvent.img1}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img1: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 2"
-          value={newEvent.img2}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img2: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 3"
-          value={newEvent.img3}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img3: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 4"
-          value={newEvent.img4}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img4: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 5"
-          value={newEvent.img5}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img5: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 6"
-          value={newEvent.img6}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img6: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 7"
-          value={newEvent.img7}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img7: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 8"
-          value={newEvent.img8}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img8: e.target.value }))}
-        />
-        <input
-          type="text"
-          placeholder="Image URL 9"
-          value={newEvent.img9}
-          onChange={(e) => setNewEvent((prev) => ({ ...prev, img9: e.target.value }))}
-        />
+        {[...Array(12)].map((_, i) => (
+          <input
+            key={i}
+            type="text"
+            placeholder={`Image URL ${i + 1}`}
+            value={newEvent[`img${i + 1}`]}
+            onChange={(e) =>
+              setNewEvent((prev) => ({ ...prev, [`img${i + 1}`]: e.target.value }))
+            }
+          />
+        ))}
 
         <button
           className="button"
@@ -200,17 +165,31 @@ const MainEvent = ({ mainEvent, setMainEvent }) => {
           <li className="list-item" key={event.id}>
             <span>{event.event_name} - {event.category}</span>
             <span>{event.description}</span>
-            {/* Display each image if available */}
-            {event.img1 && <img src={event.img1} alt="Image 1" style={{ width: "50px", height: "50px" }} />}
-            {event.img2 && <img src={event.img2} alt="Image 2" style={{ width: "50px", height: "50px" }} />}
-            {event.img3 && <img src={event.img3} alt="Image 3" style={{ width: "50px", height: "50px" }} />}
-            {event.img4 && <img src={event.img4} alt="Image 4" style={{ width: "50px", height: "50px" }} />}
-            {event.img5 && <img src={event.img5} alt="Image 5" style={{ width: "50px", height: "50px" }} />}
-            {event.img6 && <img src={event.img6} alt="Image 6" style={{ width: "50px", height: "50px" }} />}
-            {event.img7 && <img src={event.img7} alt="Image 7" style={{ width: "50px", height: "50px" }} />}
-            {event.img8 && <img src={event.img8} alt="Image 8" style={{ width: "50px", height: "50px" }} />}
-            {event.img9 && <img src={event.img9} alt="Image 9" style={{ width: "50px", height: "50px" }} />}
-            
+
+            {[
+              event.img1,
+              event.img2,
+              event.img3,
+              event.img4,
+              event.img5,
+              event.img6,
+              event.img7,
+              event.img8,
+              event.img9,
+              event.img10,
+              event.img11,
+              event.img12,
+            ]
+              .filter((img) => img)
+              .map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Image ${index + 1}`}
+                  style={{ width: "50px", height: "50px", margin: "5px" }}
+                />
+              ))}
+
             <button
               className="delete-button"
               onClick={() => handleDelete(event.id)}

@@ -34,7 +34,6 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
-      // Removed img10
     };
 
     try {
@@ -107,7 +106,6 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       img7: newEvent.image_urls[6],
       img8: newEvent.image_urls[7],
       img9: newEvent.image_urls[8],
-      // Removed img10
     };
 
     try {
@@ -123,7 +121,11 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
         throw new Error("Network response was not ok");
       }
 
-      setSubEvent(subEvent.map((event) => (event.id === editItem.id ? { id: editItem.id, ...formattedData } : event)));
+      setSubEvent(
+        subEvent.map((event) =>
+          event.id === editItem.id ? { id: editItem.id, ...formattedData } : event
+        )
+      );
       alert("Sub Event updated successfully!");
       resetForm();
     } catch (error) {
@@ -140,7 +142,7 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
       year: "",
       month: "",
       description: "",
-      image_urls: Array(9).fill(""), 
+      image_urls: Array(9).fill(""),
     });
     setEditItem(null);
   };
@@ -208,14 +210,17 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
               {event.event_name} - {event.category} - {event.month} {event.year}
             </span>
             <div className="image-gallery">
-              {Array.from({ length: 9 }, (_, index) => (
-                <img
-                  key={index}
-                  src={event[`img${index + 1}`]}
-                  alt={`Sub Event ${index + 1}`}
-                  style={{ width: "50px", height: "50px", margin: "0 5px" }}
-                />
-              ))}
+              {/* Only display images that exist */}
+              {Object.keys(event)
+                .filter((key) => key.startsWith("img") && event[key])
+                .map((key, index) => (
+                  <img
+                    key={index}
+                    src={event[key]}
+                    alt={`Sub Event ${index + 1}`}
+                    style={{ width: "50px", height: "50px", margin: "0 5px" }}
+                  />
+                ))}
             </div>
             <div>
               <button
@@ -225,7 +230,6 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
               >
                 {isLoading ? "Processing..." : "Delete"}
               </button>
-           
             </div>
           </li>
         ))}
@@ -235,3 +239,4 @@ const SubEvent = ({ subEvent, setSubEvent }) => {
 };
 
 export default SubEvent;
+  
