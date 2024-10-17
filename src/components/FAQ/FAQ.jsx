@@ -24,7 +24,7 @@ const FAQ = () => {
     },
     {
       question: 'Is there a hostel facility available?',
-      answer: 'Yes, St. Antony’s provides hostel facilities for both boys and girls, ensuring a comfortable living environment.'
+      answer: 'Yes, St. Antony’s provides hostel facilities for both boys, ensuring a comfortable living environment.'
     },
     {
       question: 'What extracurricular activities are offered?',
