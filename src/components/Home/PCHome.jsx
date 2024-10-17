@@ -169,7 +169,7 @@ const PCHome = () => {
 
       <div className="home-main4" data-aos="fade-left">
         <div>
-          <h2>Our Head Master</h2>
+          <h2>Our Headmaster</h2>
           <p>
             Bro. Joseph Thomas, the Headmaster of St. Antony’s Higher Secondary{" "}
             {isMobileView ? "" : <br />} School, brings a wealth of experience
