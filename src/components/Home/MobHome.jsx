@@ -136,7 +136,7 @@ const MobHome = () => {
           <img src="/hmbrother.jpeg" alt="" />
         </div>
         <p>
-          Bro. Joseph Thomas, the Headmaster of St. Antony’s Higher Secondary
+          Rev Bro. Jesu Dass, the Headmaster of St. Antony’s Higher Secondary
           School, brings a wealth of experience and a visionary approach to his
           role. With a profound commitment to fostering educational excellence
           and personal development, Bro. Thomas is dedicated to creating an
