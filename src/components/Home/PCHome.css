@@ -94,6 +94,8 @@
 .home-main4 img {
   border: 15px solid white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 350px;
+  margin-top: 50px;
 }
 .home-main5 {
   display: flex;

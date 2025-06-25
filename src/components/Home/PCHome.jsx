@@ -171,7 +171,7 @@ const PCHome = () => {
         <div>
           <h2>Our Headmaster</h2>
           <p>
-            Bro. Joseph Thomas, the Headmaster of St. Antony’s Higher Secondary{" "}
+            Rev Bro. Jesu Dass, the Headmaster of St. Antony’s Higher Secondary{" "}
             {isMobileView ? "" : <br />} School, brings a wealth of experience
             and a visionary approach to {isMobileView ? "" : <br />} his role.
             With a profound commitment to fostering educational{" "}
@@ -190,7 +190,7 @@ const PCHome = () => {
           </p>
         </div>
         <div>
-          <img src="/hmbrother.webp" alt="" />
+          <img src="/hmbrother.jpeg" alt="" />
         </div>
       </div>
 

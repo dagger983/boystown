@@ -133,7 +133,7 @@ const MobHome = () => {
       <div className="mobhome-4" data-aos="fade-up">
         <h2>Our Headmaster</h2>
         <div>
-          <img src="/hmbrother.webp" alt="" />
+          <img src="/hmbrother.jpeg" alt="" />
         </div>
         <p>
           Bro. Joseph Thomas, the Headmaster of St. Antony’s Higher Secondary
