@@ -176,7 +176,7 @@ const PCHome = () => {
             and a visionary approach to {isMobileView ? "" : <br />} his role.
             With a profound commitment to fostering educational{" "}
             {isMobileView ? "" : <br />}
-            excellence and personal development, Bro. Thomas is dedicated to{" "}
+            excellence and personal development, Bro. Jesu Dass is dedicated to{" "}
             {isMobileView ? "" : <br />} creating an environment where students
             can thrive. His approachable {isMobileView ? "" : <br />} leadership
             style and innovative mindset inspire both students and{" "}
