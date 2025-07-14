@@ -139,7 +139,7 @@ const MobHome = () => {
           Rev Bro. Jesu Dass, the Headmaster of St. Antony’s Higher Secondary
           School, brings a wealth of experience and a visionary approach to his
           role. With a profound commitment to fostering educational excellence
-          and personal development, Bro. Thomas is dedicated to creating an
+          and personal development, Bro. Jesu Dass is dedicated to creating an
           environment where students can thrive. His approachable leadership
           style and innovative mindset inspire both students and staff, driving
           the school toward its goals of academic achievement and wholistic
